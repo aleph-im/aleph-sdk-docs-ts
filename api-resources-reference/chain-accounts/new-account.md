@@ -17,10 +17,14 @@ import { ethereum } from 'aleph-sdk-ts'
 
 account = await ethereum.NewAccount()
 
-// --> RETURNS THE ACCOUNT OBJECT
-{ address: '<Address generated>',
-  publicKey: '<PUBLIC KEY>',
-  wallet: { } }
+// --> RETURNS THE OBJECT
+{ 
+  account: { 
+    address: "<address>", 
+    publicKey: "<public key>",
+    wallet: <wallet object> },
+  mnemonic: "<mnemonic generated>" 
+}
 ```
 {% endtab %}
 
@@ -35,10 +39,14 @@ await solana.NewAccount()
 import { solana } from 'aleph-sdk-ts/accounts'
 account = await solana.NewAccount()
 
-// RETURNS THE ACCOUNT OBJECT
-{ address: '<ADDRESS>',
-  publicKey: '<PUBLIC KEY>',
-  wallet: { <Wallet object> } }
+// --> RETURNS THE OBJECT
+{ 
+  account: { 
+    address: "<address>", 
+    publicKey: "<public key>",
+    wallet: <wallet object> },
+  privateKey: "<private key generated>" 
+}
 ```
 {% endtab %}
 
@@ -51,15 +59,42 @@ await substrate.NewAccount()
 
 //EXAMPLE
 import { substrate } from 'aleph-sdk-ts/accounts'
-account = await substrate()
+account = await substrate.NewAccount()
 
-// RETURNS THE ACCOUNT OBJECT
-{ address: '<ADDRESS>',
-  publicKey: '<PUBLIC KEY>',
-  wallet: { <Wallet object> } }
+// --> RETURNS THE OBJECT
+{ 
+  account: { 
+    address: "<address>", 
+    publicKey: "<public key>",
+    pair: <pair object> },
+  mnemonic: "<mnemonic generated>" 
+}
 ```
 
 
+{% endtab %}
+
+{% tab title="Nuls /Nuls2" %}
+```typescript
+// FUNCTION SIGNATURE
+await nuls.NewAccount({ chain_id = 1, prefix = "" })
+await nuls2.NewAccount({ chain_id = 1, prefix = "NULS" })
+
+------------------------------------------------
+
+//EXAMPLE
+import { nuls2 } from 'aleph-sdk-ts/accounts'
+account = await nuls2.NewAccount()
+
+// --> RETURNS THE OBJECT
+{ 
+  account: { 
+    address: "<address>", 
+    publicKey: "<public key>",
+    privateKey: "<private key>" },
+  mnemonic: "<mnemonic generated>" 
+}
+```
 {% endtab %}
 {% endtabs %}
 
@@ -68,3 +103,7 @@ Some of the chains allow for passing extra parameters to create the blockchain a
 | Chain        | Parameters                                      | Default value        |
 | ------------ | ----------------------------------------------- | -------------------- |
 | **Ethereum** | <mark style="color:blue;">derivationPath</mark> | `"m/44'/60'/0'/0/0"` |
+| **Nuls**     | <mark style="color:blue;">chain\_id</mark>      | 1                    |
+|              | <mark style="color:blue;">prefix</mark>         | ""                   |
+| **Nuls2**    | <mark style="color:blue;">chain\_id</mark>      | 1                    |
+|              | <mark style="color:blue;">prefix</mark>         | "NULS"               |
