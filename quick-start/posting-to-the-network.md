@@ -40,7 +40,8 @@ import { ethereum } from 'aleph-sdk-ts/accounts'
 account = await ethereum.ImportAccountFromMnemonic('<YOUR PASSPHRASE HERE>')
 
 // Import account from private key
-account = await ethereum.ImportAccountFromPrivateKey(privateKey: '<YOUR PRIVATE KEY HERE>')
+account = await ethereum.ImportAccountFromPrivateKey("<YOUR PRIVATE KEY HERE>")
+
 ```
 {% endtab %}
 
