@@ -4,6 +4,8 @@ description: Encrypt content for an address public key using the .encrypt() func
 
 # Encrypt
 
+Encryption in aleph.im uses the [ECIES standard](https://en.wikipedia.org/wiki/Integrated\_Encryption\_Scheme), using the [ECIES Js library](https://github.com/ecies/js) on SECP256K1. Beta encryption for curve ed25519 available.
+
 ### Returns
 
 This will return the encrypted content.
