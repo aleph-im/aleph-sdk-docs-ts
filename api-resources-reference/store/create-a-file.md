@@ -6,7 +6,7 @@ description: Call the .submit() function to create a store object and save a fil
 
 ### Returns
 
-The hash of the file that was just pushed to the Storage Engine.
+The message that was just pushed to the network.
 
 
 
@@ -31,11 +31,8 @@ import { ItemType } from "aleph-sdk-ts/messages/message"
     account: account,
     fileObject: file,
     storageEngine: ItemType.storage,
-    APIServer: DEFAULT_API_V2,
+    APIServer: "https://api2.aleph.im",
   });
-  
-  // returns the file hash that was stored:
-  // "81607cfaab2de2774f837fe006e9b3cec4632388ed2738457d4e88f7429d7e83"
       
 })()
 
@@ -45,13 +42,13 @@ import { ItemType } from "aleph-sdk-ts/messages/message"
 
 ### Required parameters
 
-| Parameter                                                                       | Description                                                                                                                                                                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <mark style="color:green;">**account**</mark> - _account_                       | Account to use for signing.                                                                                                                                                                                                     |
-| <mark style="color:green;">**channel**</mark> - _string_                        | Channel of the message. Ideally, an application would decide and use one channel.                                                                                                                                               |
-| <mark style="color:green;">**fileObject**</mark> - _file_ or _blob_ or _string_ | The file you want to store.                                                                                                                                                                                                     |
-| <mark style="color:green;">**storageEngine**</mark> - _StorageEngine_           | <p>Storage engine to use, either Aleph storage or IPFS. </p><p>Possible values: <code>StorageEngine.STORAGE</code> or <code>StorageEngine.IPFS</code></p>                                                                       |
-| <mark style="color:green;">**APIServer**</mark> - _string_                      | <p>Select an API server accepting files.</p><p>ex: <a href="https://api2.aleph.im">https://api1.aleph.im</a> and "<a href="https://api2.aleph.im">https://api2.aleph.im</a>" are two available API servers accepting files.</p> |
+| Parameter                                                           | Description                                                                                                                                                                                                                     |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <mark style="color:green;">**account**</mark> - _account_           | Account to use for signing.                                                                                                                                                                                                     |
+| <mark style="color:green;">**channel**</mark> - _string_            | Channel of the message. Ideally, an application would decide and use one channel.                                                                                                                                               |
+| <mark style="color:green;">**fileObject**</mark> - _file_ or _blob_ | The file you want to store.                                                                                                                                                                                                     |
+| <mark style="color:green;">**storageEngine**</mark> - _ItemType_    | <p>Storage engine to use, either Aleph storage or IPFS. </p><p>Possible values: <code>ItemType.storage</code> or <code>ItemType.ipfs</code></p>                                                                                 |
+| <mark style="color:green;">**APIServer**</mark> - _string_          | <p>Select an API server accepting files.</p><p>ex: <a href="https://api2.aleph.im">https://api1.aleph.im</a> and "<a href="https://api2.aleph.im">https://api2.aleph.im</a>" are two available API servers accepting files.</p> |
 
 ###
 
