@@ -14,7 +14,7 @@ The hash of the file that was just pushed to the Storage Engine.
 
 ```javascript
 import { store } from 'aleph-sdk-ts'
-import { StorageEngine } from "aleph-sdk-ts/messages/message"
+import { ItemType } from "aleph-sdk-ts/messages/message"
 
 (async() => {
 
@@ -30,7 +30,7 @@ import { StorageEngine } from "aleph-sdk-ts/messages/message"
     channel: "TEST",
     account: account,
     fileObject: file,
-    storageEngine: StorageEngine.STORAGE,
+    storageEngine: ItemType.storage,
     APIServer: DEFAULT_API_V2,
   });
   

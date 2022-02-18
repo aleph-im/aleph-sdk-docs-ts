@@ -10,7 +10,7 @@ Update the specific post by [creating a new post](create-a-post.md) with the `po
 
 ```javascript
 import { post } from 'aleph-sdk-ts'
-import { StorageEngine } from "aleph-sdk-ts/messages/message"
+import { ItemType } from "aleph-sdk-ts/messages/message"
 
 (async() => {
   await post.Publish({
@@ -20,7 +20,7 @@ import { StorageEngine } from "aleph-sdk-ts/messages/message"
     channel: 'TEST',
     APIServer: 'https://api2.aleph.im',
     inlineRequested: true,
-    storageEngine: StorageEngine.STORAGE,
+    storageEngine: ItemType.storage,
     ref: "63a77911a924f0d61632f2b74784af496fbd094a11fbeed76ad6455ffad18ef8"
   })
 })()

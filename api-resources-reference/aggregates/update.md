@@ -10,7 +10,7 @@ To illustrate the update process, below we are creating an aggregate, updating i
 
 ```javascript
 import { aggregate } from 'aleph-sdk-ts'
-import { StorageEngine } from "aleph-sdk-ts/messages/message"
+import { ItemType } from "aleph-sdk-ts/messages/message"
 
 // CREATE NEW AGGREGATE WITH KEY "MY KEY" --------------------------
 
@@ -20,7 +20,7 @@ import { StorageEngine } from "aleph-sdk-ts/messages/message"
     key: 'test_key',
     content: {'a': 1, 'b': 2 },
     channel: "TEST",
-    storageEngine: StorageEngine.STORAGE,
+    storageEngine: ItemType.storage,
     inlineRequested: true,
     APIServer: "https://api2.aleph.im"
   })
@@ -41,7 +41,7 @@ import { StorageEngine } from "aleph-sdk-ts/messages/message"
       key: 'mykey', 
       content: {'a': 3, 'c': 5}, 
       channel: 'TEST',
-      storageEngine: "STORAGE",
+      storageEngine: "storage",
       inlineRequested: true,
       APIServer: "https://api2.aleph.im"
     }

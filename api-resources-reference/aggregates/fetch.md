@@ -20,8 +20,6 @@ import { aggregate } from 'aleph-sdk-ts'
 (async() => {
   await aggregate.Get({
     address: account.address,
-    keys: [],
-    APIServer: "api2.aleph.im"
   })
 })();
 
@@ -37,8 +35,19 @@ import { aggregate } from 'aleph-sdk-ts'
 
 ### Required parameters
 
-|                                                                 | Description                                                                                                                                                                                                 |
-| --------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <mark style="color:green;">**address**</mark> - _string_        | Address for which the aggregate should be returned                                                                                                                                                          |
-| <mark style="color:green;">**keys**</mark> - _array of strings_ | <p>If an empty array is passed, all keys and their content found for the address will be returned.</p><p>If some are passed, only the key value pairs with those keys will be returned for the address.</p> |
-| <mark style="color:green;">**APIServer**</mark> - _string_      | API server to query                                                                                                                                                                                         |
+|                                                          | Description                                        |
+| -------------------------------------------------------- | -------------------------------------------------- |
+| <mark style="color:green;">**address**</mark> - _string_ | Address for which the aggregate should be returned |
+
+
+
+### Optional parameters
+
+*   <mark style="color:green;">**keys**</mark> - _array of strings_\
+    `DEFAULT: []`\
+    If none are passed, all keys and their content found for the address will be returned.
+
+    If some are passed, only the key value pairs with those keys will be returned for the address.\
+
+* <mark style="color:green;">**APIServer**</mark> - _string_\
+  `DEFAULT: https://api2.aleph.im`\

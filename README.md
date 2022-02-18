@@ -1,7 +1,7 @@
 # Aleph Typescript SDK
 
 {% hint style="info" %}
-The documentation currently references <mark style="color:purple;">version 2.0.0</mark> of the aleph-sdk-ts SDK.
+The documentation currently references <mark style="color:purple;">version 2.2.2</mark> of the [aleph-sdk-ts](https://github.com/aleph-im/aleph-sdk-ts) SDK.
 {% endhint %}
 
 

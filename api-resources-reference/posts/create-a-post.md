@@ -19,7 +19,7 @@ Pass a **ref** in the optional object parameter and/or **tags** in your content 
 
 ```javascript
 import { post } from 'aleph-sdk-ts'
-import { StorageEngine } from "aleph-sdk-ts/messages/message"
+import { ItemType } from "aleph-sdk-ts/messages/message"
 
 (async() => {
   await post.Publish({
@@ -29,7 +29,7 @@ import { StorageEngine } from "aleph-sdk-ts/messages/message"
     channel: 'TEST',
     APIServer: 'https://api2.aleph.im',
     inlineRequested: true,
-    storageEngine: StorageEngine.STORAGE
+    storageEngine: ItemType.storage
   })
 })()
 
@@ -78,7 +78,7 @@ item_type: string;
 sender: string;
 signature: string;
 time: number;
-type:string; }
+type: MessageType.post; }
 ```
 
 A searchable reference string of your choice to save to the `item_content.ref`.\
