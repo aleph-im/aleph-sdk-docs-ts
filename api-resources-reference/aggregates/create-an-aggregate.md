@@ -14,7 +14,7 @@ An aggreagte message object that is being sent to the network.
 
 ```javascript
 import { aggregate } from 'aleph-sdk-ts'
-import { StorageEngine } from "aleph-sdk-ts/messages/message"
+import { ItemType } from "aleph-sdk-ts/messages/message"
 
 (async () => {
   await aggregate.Publish({

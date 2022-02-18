@@ -18,7 +18,7 @@ account = await ethereum.ImportAccountFromPrivateKey('<Your Private Key Here>')
 await account.encrypt(content: <Buffer Content>)
 ```
 
-.encrypt() is available on all accoutns: ethereum, nuls, nuls2, solana and substrate.
+.encrypt() is available on all accounts: ethereum, nuls, nuls2, solana and substrate.
 
 {% hint style="info" %}
 For Solana accounts:&#x20;

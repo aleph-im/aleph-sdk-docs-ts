@@ -14,5 +14,5 @@ If the message to be "forgotten" was referencing a `Store` file, the file from t
 
 The API allows you to create a forget message:
 
-| Create a forget message | .publish() |
-| ----------------------- | ---------- |
+| [Create a forget message](forget-a-message.md) | [.publish()](forget-a-message.md) |
+| ---------------------------------------------- | --------------------------------- |

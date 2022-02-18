@@ -18,8 +18,8 @@ import { ItemType } from "aleph-sdk-ts/messages/message"
   const file = new File(<Your Program Here>);
       
   program.publish({
-    account: ,
-    channel: ,
+    account: account,
+    channel: "TEST",
     storageEngine: ItemType.storage, 
     inlineRequested: false,
     APIServer: "https://api2.aleph.im",
